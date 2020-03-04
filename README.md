@@ -11,26 +11,28 @@ Contained in this repository is the corpus data itself, along with a sample Pyth
 Specifically, two versions of the corpus are included. One is the unfiltered corpus, as it was recorded. From the filtered version, I excluded individual drawings that either contained interrupted drawings, wrong drawings (e.g., a drawn 9, when a 1 was asked for).
 
 The corpus is stored in JSON format, with a structure as follows:
-    {
-        digit (0-9): {
-            user-id [1,2,4,5,6]: {
-                repetition (0-9): 
-                [
-                    {
-                        start-coordinate "start": {
-                            "x": float,
-                            "y": float
-                        },
-                        end-coordinate "end": {
-                            "x": float,
-                            "y": float
-                        },
-                        absolute timestamp "time": float
-                    }
-                ]
-            }
+```json
+{
+    digit (0-9): {
+        user-id [1,2,4,5,6]: {
+            repetition (0-9): 
+            [
+                {
+                    start-coordinate "start": {
+                        "x": float,
+                        "y": float
+                    },
+                    end-coordinate "end": {
+                        "x": float,
+                        "y": float
+                    },
+                    absolute timestamp "time": float
+                }
+            ]
         }
     }
+}
+```
 
 Also, under the corpus_plots folder, each individuals drawings were plotted.
 As you see, the corpus from individual 6 had to be heavily filtered. Also the drawings from that user have been written at very low speeds, which resulted in lots of noise. This data is still included, but should not be used for training, as it can heavily offset previous training.
