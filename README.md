@@ -17,6 +17,7 @@ The corpus is stored in JSON format, with a structure as follows:
         user-id [1,2,4,5,6]: {
             repetition (0-9): 
             [
+                for each movement coordinate
                 {
                     start-coordinate "start": {
                         "x": float,
